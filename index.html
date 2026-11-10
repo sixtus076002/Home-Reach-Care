@@ -1,66 +1,235 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home Reach Care - Physiotherapy Hospital</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Reach Care | Physiotherapy, Hijama & Stroke Rehab in Katabi, Entebbe</title>
+<meta name="description" content="Home Reach Care - Where All Healing Begins. Physiotherapy, Hijama, Stroke Rehab, Chiropractic in Katabi, Entebbe. At our centre or at your home. Call 0795 860 541">
 <style>
-body{font-family:Arial;margin:0;background:#f4f8f7;color:#222}
-header{background:#0a5c7a;color:white;padding:40px 20px;text-align:center}
-header h1{margin:0;font-size:32px}
-.btn{display:inline-block;background:#ffcc00;color:#000;padding:14px 24px;border-radius:30px;text-decoration:none;font-weight:bold;margin-top:15px}
-.section{padding:30px 20px;max-width:800px;margin:auto}
-.card{background:white;padding:20px;border-radius:12px;margin-bottom:15px;box-shadow:0 2px 8px #ddd}
-h2{color:#0a5c7a}
-footer{background:#0a2e26;color:white;text-align:center;padding:25px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#f7fbfb;color:#0a2a4a;line-height:1.6}
+a{text-decoration:none}
+.topbar{background:#073a5e;color:#fff;padding:10px 15px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:14px;position:sticky;top:0;z-index:99}
+.topbar b{color:#ffd84d}
+.btn{display:inline-block;padding:13px 22px;border-radius:30px;font-weight:bold;border:none;cursor:pointer}
+.btn-green{background:#00a99d;color:#fff}
+.btn-yellow{background:#ffd84d;color:#0a2a4a}
+.btn-white{background:#fff;color:#0a2a4a;border:1px solid #ddd}
+header{padding:18px 15px;text-align:center;background:#fff}
+header h1{font-size:28px;letter-spacing:1px}
+header h1 span{color:#00a99d}
+header p{color:#666}
+.hero{position:relative;background:#073a5e;color:#fff;overflow:hidden}
+.hero img{width:100%;height:340px;object-fit:cover;display:block;opacity:.95}
+.hero-text{position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(transparent,rgba(0,0,0,.85))}
+.hero-text h2{font-size:28px;line-height:1.2}
+.hero-text p{margin:10px 0 15px;opacity:.9}
+.pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:15px}
+.pills span{background:#e6f7f5;border:1px solid #00a99d;padding:8px 14px;border-radius:20px;font-size:14px;font-weight:bold}
+.section{padding:30px 15px;max-width:1100px;margin:auto}
+.section h2{text-align:center;font-size:26px;margin-bottom:8px}
+.section p.center{text-align:center;color:#555;max-width:700px;margin:0 auto 20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr 1fr 1fr}}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.card img{width:100%;height:150px;object-fit:cover;background:#d9eeee;display:block}
+.card div{padding:12px}
+.card h3{font-size:16px}
+.card p{font-size:13px;color:#555}
+.card a{color:#00a99d;font-weight:bold;font-size:13px}
+.trust{background:#c9ece9;border-radius:16px;padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.trust div{background:#fff;padding:12px;border-radius:10px;font-size:14px}
+.consult{background:#073a5e;color:#fff;text-align:center;padding:28px 15px;border-radius:16px}
+.consult h2{color:#ffd84d}
+.consult .price{font-size:38px;font-weight:bold;margin:8px 0}
+.doctor{background:#fff;border:2px solid #00a99d;border-radius:16px;padding:20px;display:flex;gap:15px;align-items:center;flex-wrap:wrap}
+.doctor img{width:110px;height:110px;object-fit:cover;border-radius:50%;background:#d9eeee}
+.faq details{background:#fff;padding:14px;border-radius:10px;margin-bottom:10px}
+.faq summary{font-weight:bold;cursor:pointer}
+.form{background:#fff;padding:20px;border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.form input,.form select,.form textarea{width:100%;padding:13px;margin:8px 0;border:1px solid #ddd;border-radius:10px;font-size:15px}
+footer{background:#073a5e;color:#fff;padding:25px 15px;text-align:center}
+footer a{color:#ffd84d}
+.float{position:fixed;bottom:18px;right:18px;background:#25D366;color:#fff;padding:14px 18px;border-radius:50px;font-weight:bold;box-shadow:0 6px 18px rgba(0,0,0,.3);z-index:100}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gallery img{width:100%;height:160px;object-fit:cover;border-radius:12px;background:#d9eeee}
 </style>
 </head>
 <body>
+
+<!-- TOP BAR - MAIN NUMBER ONLY -->
+<div class="topbar">
+  <div><b>HOME REACH CARE</b> • Where All Healing Begins</div>
+  <div>Call / WhatsApp: <a href="tel:+256795860541" style="color:#fff"><b>0795 860 541</b></a></div>
+  <a class="btn btn-yellow" style="padding:8px 14px" href="https://wa.me/256795860541?text=Hello%20Home%20Reach%20Care,%20I%20want%20to%20book%20an%20appointment">Book on WhatsApp</a>
+</div>
+
 <header>
-<h1>HOME REACH CARE</h1>
-<p><b>Physiotherapy Hospital</b><br>Move Better. Feel Better. Live Better.</p>
-<p>Appointments: 0795 860 541</p>
-<a class="btn" href="https://wa.me/256795860541?text=Hello%20Home%20Reach%20Care,%20I%20want%20to%20book%20a%20physiotherapy%20session">Book Physio On WhatsApp</a>
+  <h1>HOME <span>REACH</span> CARE</h1>
+  <p>Therapy & Wellness Centre • Katabi, Entebbe</p>
 </header>
-<div class="section">
-<h2>Our Physiotherapy Services</h2>
-<div class="card"><b>Back & Neck Pain</b><br>Treatment for back pain, neck pain, sciatica, disc problems.</div>
-<div class="card"><b>Stroke Rehabilitation</b><br>We help stroke patients regain movement, balance and independence at home.</div>
-<div class="card"><b>Sports Injuries</b><br>Fast recovery for football, gym, running injuries - sprains, strains, knee pain.</div>
-<div class="card"><b>Joint & Arthritis Pain</b><br>Knee, shoulder, hip pain and arthritis management.</div>
-<div class="card"><b>Home Physiotherapy</b><br>Our physiotherapist comes to YOUR home in Kampala & Wakiso.</div>
-<div class="card"><b>Children & Elderly Physio</b><br>Gentle care for children with movement problems and elderly care.</div>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="images/hero.jpg" alt="Physiotherapy at Home Reach Care Katabi">
+  <div class="hero-text">
+    <h2>Physiotherapy, Hijama & Stroke Rehab in Katabi, Entebbe<br>At Our Centre or At Your Home</h2>
+    <p>Stiff back? Sore joints? Stroke recovery? Our therapists listen first, then treat you properly.</p>
+    <a class="btn btn-green" href="tel:+256795860541">📞 Call Now - 0795 860 541</a>
+    <a class="btn btn-yellow" href="https://wa.me/256795860541?text=Hello%20Home%20Reach%20Care,%20I%20want%20to%20book">💬 WhatsApp</a>
+  </div>
+</section>
+
+<div class="pills">
+  <span>Physiotherapy</span><span>Hijama / Cupping</span><span>Stroke Rehab</span><span>Massage</span>
 </div>
-<div class="section">
-<h2>Why Choose Us?</h2>
-<div class="card">
-Qualified Physiotherapists<br>
-We treat you at our centre OR at your home<br>
-Personal treatment plan for you<br>
-Affordable sessions<br>
-Fast booking on WhatsApp - no long waiting
-</div>
-</div>
-<div class="section">
-<h2>How It Works</h2>
-<div class="card">
-<b>1.</b> Message us on WhatsApp<br>
-<b>2.</b> Tell us your pain / problem<br>
-<b>3.</b> We assess you & start treatment<br>
-<b>4.</b> You recover step by step
-</div>
-</div>
-<div class="section">
-<h2>Contact Us</h2>
-<div class="card">
-<b>Phone / WhatsApp:</b> 0795 860 541<br>
-<b>Email:</b> homereachcare@gmail.com<br>
-<b>Location:</b> Kampala, Uganda<br><br>
-<a class="btn" href="https://wa.me/256795860541">Chat On WhatsApp Now</a>
-</div>
-</div>
+
+<!-- SERVICES -->
+<section class="section">
+  <h2>Our Services</h2>
+  <p class="center">Choose a service and book on WhatsApp. Consultation is 50,000/= . Treatment plan is given after assessment.</p>
+  <div class="grid">
+    <div class="card"><img src="images/physiotherapy.jpg" alt="Physiotherapy"><div><h3>Physiotherapy</h3><p>Back pain, neck pain, sciatica, joints, posture.</p><a href="https://wa.me/256795860541?text=I%20want%20Physiotherapy">Book this →</a></div></div>
+    <div class="card"><img src="images/hijama.jpg" alt="Wet Cupping Hijama"><div><h3>Wet Cupping / Hijama</h3><p>Traditional detox, circulation, pain relief.</p><a href="https://wa.me/256795860541?text=I%20want%20Hijama">Book this →</a></div></div>
+    <div class="card"><img src="images/dry-cupping.jpg" alt="Dry Cupping"><div><h3>Dry Cupping Therapy</h3><p>Muscle tension, back pain, relaxation.</p><a href="https://wa.me/256795860541?text=I%20want%20Dry%20Cupping">Book this →</a></div></div>
+    <div class="card"><img src="images/stroke.jpg" alt="Stroke Rehab"><div><h3>Stroke Rehab</h3><p>Regain movement, balance and independence at home.</p><a href="https://wa.me/256795860541?text=I%20want%20Stroke%20Rehab">Book this →</a></div></div>
+    <div class="card"><img src="images/sports.jpg" alt="Sports Rehab"><div><h3>Sports Rehab & Massage</h3><p>Injury recovery, strength, flexibility.</p><a href="https://wa.me/256795860541?text=I%20want%20Sports%20Rehab">Book this →</a></div></div>
+    <div class="card"><img src="images/skin.jpg" alt="Skin Therapy"><div><h3>Skin Therapy</h3><p>Healthy skin, glow, care and treatment.</p><a href="https://wa.me/256795860541?text=I%20want%20Skin%20Therapy">Book this →</a></div></div>
+    <div class="card"><img src="images/ice.jpg" alt="Ice Therapy"><div><h3>Ice Therapy</h3><p>Reduce swelling, pain and inflammation.</p><a href="https://wa.me/256795860541?text=I%20want%20Ice%20Therapy">Book this →</a></div></div>
+    <div class="card"><img src="images/cranial.jpg" alt="Cranial Therapy"><div><h3>Cranial Therapy</h3><p>Headache, stress, relaxation, head & neck.</p><a href="https://wa.me/256795860541?text=I%20want%20Cranial%20Therapy">Book this →</a></div></div>
+    <div class="card"><img src="images/black-stone.jpg" alt="Black Stone Therapy"><div><h3>Black Stone Therapy</h3><p>Deep warmth, muscle relief, relaxation.</p><a href="https://wa.me/256795860541?text=I%20want%20Black%20Stone">Book this →</a></div></div>
+    <div class="card"><img src="images/chiropractic.jpg" alt="Chiropractic"><div><h3>Chiropractic</h3><p>Spine alignment, back & neck correction.</p><a href="https://wa.me/256795860541?text=I%20want%20Chiropractic">Book this →</a></div></div>
+    <div class="card"><img src="images/infrared.jpg" alt="Far Infrared"><div><h3>Far Infrared Thermal Therapy</h3><p>Deep heat for pain, circulation and healing.</p><a href="https://wa.me/256795860541?text=I%20want%20Infrared">Book this →</a></div></div>
+    <div class="card"><img src="images/acupressure.jpg" alt="Acupressure"><div><h3>Acupressure</h3><p>Pressure points for pain, stress, energy.</p><a href="https://wa.me/256795860541?text=I%20want%20Acupressure">Book this →</a></div></div>
+    <div class="card"><img src="images/moxibustion.jpg" alt="Moxibustion"><div><h3>Moxibustion</h3><p>Warm herbal therapy for pain and circulation.</p><a href="https://wa.me/256795860541?text=I%20want%20Moxibustion">Book this →</a></div></div>
+    <div class="card"><img src="images/low-frequency.jpg" alt="Low Frequency"><div><h3>Low Frequency Therapy</h3><p>Gentle stimulation for pain and muscles.</p><a href="https://wa.me/256795860541?text=I%20want%20Low%20Frequency">Book this →</a></div></div>
+    <div class="card"><img src="images/tourmanium.jpg" alt="Tourmanium"><div><h3>Tourmanium Thermal Massage</h3><p>Thermal bed massage for full body relief.</p><a href="https://wa.me/256795860541?text=I%20want%20Tourmanium">Book this →</a></div></div>
+    <div class="card"><img src="images/home-care.jpg" alt="Home Care"><div><h3>Home Care & Wellness</h3><p>We come to your home in Entebbe & Kampala.</p><a href="https://wa.me/256795860541?text=I%20want%20Home%20Care">Book this →</a></div></div>
+  </div>
+</section>
+
+<!-- WHO WE HELP -->
+<section class="section">
+  <h2>Who We Help</h2>
+  <p class="center">If this is you, WhatsApp us today.</p>
+  <div class="trust">
+    <div>✅ Back / Neck Pain & Sciatica</div>
+    <div>✅ Stroke Patients</div>
+    <div>✅ Sports Injuries</div>
+    <div>✅ Elderly at Home</div>
+    <div>✅ Stress, Insomnia, Tired Body</div>
+    <div>✅ Poor Circulation / Diabetes Care</div>
+  </div>
+</section>
+
+<!-- CONSULTATION - ONLY PRICE -->
+<section class="section">
+  <div class="consult">
+    <h2>Consultation</h2>
+    <div class="price">50,000/=</div>
+    <p>Come for assessment. We listen, examine, and give you a clear treatment plan.<br>We accept Mobile Money and Cash.</p><br>
+    <a class="btn btn-yellow" href="https://wa.me/256795860541?text=Hello,%20I%20want%20to%20book%20a%20consultation%20(50,000)">Book Consultation on WhatsApp</a>
+  </div>
+</section>
+
+<!-- DOCTOR INFO - DR MONICA MENTIONED ONLY ONCE HERE -->
+<section class="section">
+  <h2>Meet Our Doctor</h2>
+  <div class="doctor">
+    <img src="images/doctor-monica.jpg" alt="Dr Monica Stief">
+    <div>
+      <h3>Dr. Monica Stief</h3>
+      <p>Lead Therapist at Home Reach Care — Physiotherapy, Hijama, Stroke & Wellness Care.</p>
+      <p style="font-size:14px;color:#555">Doctor Contact: 0760 022 287</p>
+      <p style="font-size:13px;color:#888">For all bookings, please use main number: 0795 860 541</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section">
+  <h2>Our Centre in Katabi</h2>
+  <p class="center">Replace these with your real photos when you take them at the facility.</p>
+  <div class="gallery">
+    <img src="images/gallery1.jpg" alt="Facility photo 1">
+    <img src="images/gallery2.jpg" alt="Facility photo 2">
+    <img src="images/gallery3.jpg" alt="Facility photo 3">
+    <img src="images/gallery4.jpg" alt="Facility photo 4">
+  </div>
+  <p style="text-align:center;margin-top:10px;font-size:13px;color:#888">To add a photo: save it as images/gallery1.jpg etc. and upload to same folder.</p>
+</section>
+
+<!-- WHY US -->
+<section class="section">
+  <h2>Why Choose Home Reach Care</h2>
+  <div class="trust">
+    <div>📍 Opposite St. Joseph Primary School, Katabi</div>
+    <div>🕐 Open Every Day 8:00am - 9:00pm</div>
+    <div>💵 We Accept Mobile Money & Cash</div>
+    <div>🏠 Same-Day Home Visit Available</div>
+    <div>👩‍⚕️ Professional & Licensed Care</div>
+    <div>💬 Book in 1 minute on WhatsApp</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq">
+  <h2>Questions People Ask</h2>
+  <details><summary>Is Hijama painful?</summary><p>No, most people feel light pressure and relief. We use clean, professional equipment and explain every step.</p></details>
+  <details><summary>Do you come to my home?</summary><p>Yes. We do home visits in Katabi, Entebbe, Kajjansi and Kampala. WhatsApp us your location on 0795 860 541.</p></details>
+  <details><summary>How many sessions for stroke rehab?</summary><p>It depends on your condition. After your 50,000/= consultation, we give you a clear plan.</p></details>
+  <details><summary>What should I wear / bring?</summary><p>Wear comfortable clothes. Bring any medical reports or X-rays if you have them.</p></details>
+  <details><summary>How do I find you?</summary><p>Opposite St. Joseph Primary School in Katabi. Tell boda / taxi: St. Joseph Katabi. Call 0795 860 541 if you get lost.</p></details>
+</section>
+
+<!-- BOOKING -->
+<section class="section">
+  <h2>Book Appointment</h2>
+  <div class="form">
+    <label>Your Name</label><input id="name" placeholder="e.g. Sarah Nakato">
+    <label>Service Needed</label>
+    <select id="service">
+      <option>Physiotherapy</option><option>Wet Cupping / Hijama</option><option>Dry Cupping</option><option>Stroke Rehab</option><option>Sports Rehab & Massage</option><option>Skin Therapy</option><option>Ice Therapy</option><option>Cranial Therapy</option><option>Black Stone Therapy</option><option>Chiropractic</option><option>Far Infrared Thermal Therapy</option><option>Acupressure</option><option>Moxibustion</option><option>Low Frequency Therapy</option><option>Tourmanium Thermal Massage</option><option>Home Care & Wellness</option><option>Consultation - 50,000/=</option>
+    </select>
+    <label>Where? Centre or Home Visit?</label>
+    <select id="place"><option>At Centre - Katabi</option><option>Home Visit</option></select>
+    <label>Your Message / Location</label><textarea id="msg" placeholder="e.g. I have back pain, I live in Kitinda, Entebbe"></textarea>
+    <button class="btn btn-green" style="width:100%" onclick="book()">Send Booking on WhatsApp</button>
+    <p style="text-align:center;font-size:13px;color:#888;margin-top:8px">This opens WhatsApp to Home Reach Care - 0795 860 541</p>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="section">
+  <h2>Find Us</h2>
+  <p class="center">You'll find us opposite St. Joseph Primary School in Katabi. Call us if you get lost and we will guide you.</p>
+  <iframe src="https://www.google.com/maps?q=St.+Joseph+Primary+School+Katabi+Entebbe&output=embed" width="100%" height="300" style="border:0;border-radius:14px" loading="lazy"></iframe>
+  <div style="text-align:center;margin-top:15px">
+    <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&query=St.+Joseph+Primary+School+Katabi+Entebbe">Get Directions on Google Maps</a>
+    <a class="btn btn-white" href="tel:+256795860541">Call 0795 860 541</a>
+  </div>
+</section>
+
 <footer>
-2026 Home Reach Care - Physiotherapy Hospital<br>
-Owned by Sixtus | Kampala, Uganda
+  <h3>HOME REACH CARE</h3>
+  <p>Where All Healing Begins • Therapy & Wellness Centre</p>
+  <p>Opposite St. Joseph Primary School, Katabi, Entebbe</p>
+  <p>Open Daily 8:00am - 9:00pm • Consultation 50,000/= • Mobile Money & Cash</p>
+  <p>Call / WhatsApp: <a href="tel:+256795860541">0795 860 541</a></p>
+  <p style="opacity:.7;font-size:12px;margin-top:10px">© 2026 Home Reach Care. All rights reserved.</p>
 </footer>
+
+<a class="float" href="https://wa.me/256795860541?text=Hello%20Home%20Reach%20Care">💬 WhatsApp</a>
+
+<script>
+function book(){
+  var n=document.getElementById('name').value||'';
+  var s=document.getElementById('service').value;
+  var p=document.getElementById('place').value;
+  var m=document.getElementById('msg').value||'';
+  var text='Hello Home Reach Care, I want to book: '+s+' | Place: '+p+' | Name: '+n+' | Message: '+m;
+  window.open('https://wa.me/256795860541?text='+encodeURIComponent(text),'_blank');
+}
+</script>
 </body>
 </html>
